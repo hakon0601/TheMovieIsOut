@@ -48,7 +48,7 @@ def get_all_coming_movies(max_movies_each_month=10):
                 titles_this_month.append(parse_movie_title(link.contents[0].attrs['title']))
                 if len(titles_this_month) == max_movies_each_month:
                     break
-        relevant_titles.append(titles_this_month)
+        relevant_titles += titles_this_month
 
     print('Titles: ', relevant_titles)
     return relevant_titles
